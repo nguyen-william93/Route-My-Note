@@ -23,9 +23,9 @@ router.post("/notes", (req, res) => {
 
 //delete route, delete note base on ID passed in
 router.delete("/notes/:id", (req, res) => {
-    let note = findNoteById(req.params.id, notes);
+    let result = findNoteById(req.params.id, notes);
     deleteNote(note, notes);
-    res.json(note);
+    res.json(notes);
 })
 
 
